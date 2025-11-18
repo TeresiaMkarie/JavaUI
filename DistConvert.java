@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class DistConvert {
+public class DistConvertor {
     
     public static void main(String[] args){
 
@@ -75,15 +75,16 @@ public class DistConvert {
  
     //Fourth label input
     JLabel label4 = new JLabel();
-    label4.setText("FEET  : ");
+    label4.setText("FEET");
     label4.setHorizontalTextPosition(JLabel.CENTER);
     label4.setVerticalTextPosition(JLabel.CENTER);
     label4.setForeground(new Color(0xffffff));
     label4.setFont(new Font("Arial", Font.BOLD, 10));
     label4.setBackground(new Color(0x162454));
     label4.setOpaque(true);
-    label4.setHorizontalAlignment(JLabel.RIGHT);
-    label4.setBounds(20, 180, 60, 35);
+    label4.setHorizontalAlignment(JLabel.CENTER);
+    label4.setBounds(20, 180, 80, 35);
+  
 
   //Create a JFrame instance
    JFrame frame = new JFrame();
@@ -112,8 +113,16 @@ public class DistConvert {
     @Override
     public void actionPerformed(ActionEvent e){
 
+     int kilo = Integer.parseInt(t1.getText());
+     int cm = kilo*100000;
+     t2.setText(String.valueOf(cm));
+     double ml =kilo*0.621371;
+     t3.setText(String.valueOf(ml));
+     double fg = kilo*3280.84;
+     t4.setText(String.valueOf(fg));
     }
    });
-    
+    calc.setBounds(60,270, 80,30);
+    frame.add(calc);
 }
 }
