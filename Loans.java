@@ -20,6 +20,7 @@ Border  border = BorderFactory.createLineBorder(Color.WHITE,1);
     t1.setOpaque(true);
     t1.setForeground(new Color(0xffffff));
     t1.setBorder(border);
+
   
     //First label input
     JLabel label = new JLabel();
@@ -34,12 +35,11 @@ Border  border = BorderFactory.createLineBorder(Color.WHITE,1);
     label.setBounds(20, 30, 60, 35);
 
    //second textfield Input
-   JTextField t2 = new JTextField();
+    final TextField t2 = new TextField();
     t2.setBounds(88,80,140,35);
     t2.setBackground(new Color(0x162454));
-    t2.setOpaque(true);
     t2.setForeground(new Color(0Xffffff));
-    t2.setBorder(border);
+
 
     //Second label input
     JLabel label2 = new JLabel();
@@ -54,12 +54,11 @@ Border  border = BorderFactory.createLineBorder(Color.WHITE,1);
     label2.setBounds(20, 80, 60, 35);
 
     //Third textfield Input
-    JTextField t3 = new JTextField();
+    final TextField t3 = new TextField();
     t3.setBounds(88,130,60,35);
     t3.setBackground(new Color(0x162454));
-    t3.setOpaque(true);
     t3.setForeground(new Color(0xffffff));
-    t3.setBorder(border);
+
   
     
     //Third label input
@@ -75,17 +74,16 @@ Border  border = BorderFactory.createLineBorder(Color.WHITE,1);
     label3.setBounds(20, 130, 60, 35);
 
      //fourth textfield Input
-    JTextField t4 = new JTextField();
+    final TextField t4 = new TextField();
     t4.setBounds(88,180,60,35);
     t4.setBackground(new Color(0x162454));
-    t4.setOpaque(true);
     t4.setForeground(new Color(0xffffff));
-    t4.setBorder(border);
+   
   
     
     //Fourth label input
     JLabel label4 = new JLabel();
-    label4.setText("RATE    : ");
+    label4.setText("RATE : ");
     label4.setHorizontalTextPosition(JLabel.CENTER);
     label4.setVerticalTextPosition(JLabel.CENTER);
     label4.setForeground(new Color(0xffffff));
@@ -96,13 +94,12 @@ Border  border = BorderFactory.createLineBorder(Color.WHITE,1);
     label4.setBounds(20, 180, 60, 35);
 
   //fifth textfield Input
-    JTextField t5 = new JTextField();
+    final TextField t5 = new TextField();
     t5.setBounds(88,230,140,35);
     t5.setBackground(new Color(0x162454));
-    t5.setOpaque(true);
     t5.setForeground(new Color(0xffffff));
     t5.setEditable(false);
-    t5.setBorder(border);
+
   
      
   
@@ -149,16 +146,16 @@ Border  border = BorderFactory.createLineBorder(Color.WHITE,1);
    pesa.addActionListener(new ActionListener() {
     @Override
     public void actionPerformed(ActionEvent e){
-      double p = Double.parseDouble(t2.getText());
-      double rate = Double.parseDouble(t4.getText());
-     double n= Double.parseDouble(t3.getText());
-     double sum =p*(1+ Math.pow((rate/100), n));
+     int p = Integer.parseInt(t2.getText());
+     int rate = Integer.parseInt(t4.getText());
+    int n= Integer.parseInt(t3.getText());
+    int sum = p*(1+(rate/100)^n);
      t5.setText(String.valueOf(sum));
     }
     
    });
 
-   pesa.setBounds(20, 310, 80, 30);
+   pesa.setBounds(20, 350, 80, 30);
    pesa.setBackground(new Color(0x1f87fc));
    pesa.setForeground(new Color(0xffffff));
    pesa.setFont(new Font("MV BOLI", Font.BOLD, 18));
