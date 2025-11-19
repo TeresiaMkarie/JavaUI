@@ -1,3 +1,4 @@
+
 import javax.swing.*;
 import javax.swing.border.Border;
 
@@ -155,7 +156,7 @@ Border  border = BorderFactory.createLineBorder(Color.WHITE,1);
     
    });
 
-   pesa.setBounds(20, 350, 80, 30);
+   pesa.setBounds(60, 300git, 80, 30);
    pesa.setBackground(new Color(0x1f87fc));
    pesa.setForeground(new Color(0xffffff));
    pesa.setFont(new Font("MV BOLI", Font.BOLD, 18));
