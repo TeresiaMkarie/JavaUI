@@ -1,3 +1,4 @@
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,7 +13,6 @@ public class DistConvert {
    final TextField t1 = new TextField();
     t1.setBounds(88,30,140,35);
     t1.setBackground(new Color(0x162454));
-    t1.setEditable(false);
     t1.setForeground(new Color(0xffffff));
 
   
@@ -33,6 +33,7 @@ public class DistConvert {
     t2.setBounds(88,80,140,35);
     t2.setBackground(new Color(0x162454));
     t2.setForeground(new Color(0Xffffff));
+    t2.setEditable(false);
     
 
     //Second label input
@@ -52,6 +53,7 @@ public class DistConvert {
     t3.setBounds(88,130,140,35);
     t3.setBackground(new Color(0x162454));
     t3.setForeground(new Color(0xffffff));
+    t3.setEditable(false);
 
     //Third label input
     JLabel label3 = new JLabel();
@@ -71,6 +73,7 @@ public class DistConvert {
     t4.setBounds(88,180,140,35);
     t4.setBackground(new Color(0x162454));
     t4.setForeground(new Color(0xffffff));
+    t4.setEditable(false);
 
  
     //Fourth label input
@@ -88,7 +91,7 @@ public class DistConvert {
 
   //Create a JFrame instance
    JFrame frame = new JFrame();
-   frame.setTitle("Loans Detector");
+   frame.setTitle("Distance Convertor");
    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  //Exiting out of the application
    frame.setResizable(false);
    frame.setSize(700,700);
@@ -123,6 +126,9 @@ public class DistConvert {
     }
    });
     calc.setBounds(60,270, 80,30);
+    calc.setForeground(new Color(0xffffff));
+    calc.setBackground(new Color(0x1f87fc));
+    calc.setFont(new Font("Times New Roman", Font.BOLD, 13));
     frame.add(calc);
 }
 }
