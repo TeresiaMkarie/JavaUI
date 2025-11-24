@@ -7,7 +7,7 @@ import java.awt.*;
 public class BmiCalc {
 
     
-    public static void main(String[] args){
+public static void main(String[] args){
 
 //An instance of a JFrame
 JFrame frame = new JFrame();
@@ -117,22 +117,22 @@ JLabel label3 = new JLabel();
 final Label category= new Label();
 category.setFont(new Font("Segoe UI", Font.BOLD, 18));
 category.setForeground(Color.white);
-category.setBounds(20, 300, 350, 40);
+category.setBounds(70, 300, 350, 40);
 frame.add(category);
 
 
 
 if (bmi < 18.5) {
-    category.setText("Underweight♦");
+    category.setText("Underweight!");
 } 
 else if (bmi >= 18.5 && bmi <= 24.9) {
-    category.setText("Normal♥");
+    category.setText("Normal");
 }
 else if (bmi >= 25 && bmi <= 29.9) {
-    category.setText("Overweight♠");
+    category.setText("Overweight!!");
 }
 else {
-    category.setText("Obesity♣");
+    category.setText("Obesity!!!");
 }
 
 
